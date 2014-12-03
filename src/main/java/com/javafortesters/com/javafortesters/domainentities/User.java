@@ -42,36 +42,69 @@ public class User {
 
 // a constructor with arguments
 
-    private final String password;
-    private final String username;
+//    private final String password;
+//    private final String username;
+//
+//    public User(String username, String password)
+//
+//    {
+//        this.username = username;
+//        this.password = password;
+//    }
+//
+//    @Test
+//    public void canConstructWithUsernameAndPassword() {
+//        User user = new User("admin", "123456");
+//        assertEquals("given username expected",
+//                "admin",
+//                user.getUsername());
+//
+//        assertEquals("given password expected",
+//                "123456",
+//                user.getPassword());
+//
+//    }
+//
+//    private String getUsername() {
+//        return "admin";
+//    }
+//
+//    private String getPassword(){
+//        return "123456";
+//    }
+//
+//
 
-    public User(String username, String password)
+    // we will pratice setter method to override constructed
 
-    {
-        this.username = username;
-        this.password = password;
-    }
+    private String password;
+    private String username;
+
 
     @Test
-    public void canConstructWithUsernameAndPassword() {
-        User user = new User("admin", "123456");
-        assertEquals("given username expected",
-                "admin",
-                user.getUsername());
+    public void canSetPasswordAfterConstructed(){
+        User user = new User();
+        user.setPassword("123456");
 
-        assertEquals("given password expected",
+        assertEquals("setter password expected",
                 "123456",
                 user.getPassword());
 
     }
 
-    private String getUsername() {
-        return "admin";
-    }
-
-    private String getPassword(){
+    private String getPassword() {
         return "123456";
     }
+
+    private void getPassword(String password) {
+    this.password = password;
+
+    }
+
+    private void setPassword(String password) {
+        this.password = password;
+    }
+
 }
 
 
