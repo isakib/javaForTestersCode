@@ -6,16 +6,18 @@ public class IntegerTestExamples {
 
     @Test
     public void integerExploration() {
-        Integer four = new Integer(4);
-        assertEquals("intValue returns int 4",
-               4, four.intValue());
-
-//        Integer four = new Integer(4); - missing , as failed to print 6
+//        Integer four = new Integer(4);
+//        assertEquals("intValue returns int 4",
+//                4, four.intValue());
 
         Integer six = 6;
         assertEquals("autoboxing assignment for 6",
-            6, six.intValue());
-        System.out.println(six);
+                6, six, intValue());
+        System.out.println("six");
 
+    }
+
+    private double intValue() {
+        return 0;
     }
 }
